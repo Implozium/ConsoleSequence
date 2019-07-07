@@ -103,7 +103,7 @@ ConsoleSequence
 ```
 │ Normal line            │
 │ line                   │
-├·······················>│
+├───────────────────────>│
 ```
 ```
 │ Dashed open arrow      │             │       │
@@ -123,11 +123,11 @@ participant unmodified as UNM
 participant modified as M
 participant staged as S
 
-UNT-->UNM: add the file
-UNM-->M: edit the file
-M-->S: stage the file
-UNM-->UNT: remove the file
-S-->UNM: commit`;
+UNT->UNM: add the file
+UNM->M: edit the file
+M->S: stage the file
+UNM->UNT: remove the file
+S->UNM: commit`;
 
 console.log(new ConsoleSequence(0).make(str).join('\n'));
 ```

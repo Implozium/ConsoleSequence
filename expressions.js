@@ -200,7 +200,7 @@ class LineExpression extends Expression {
         const width = info.offsetOfColumns[j] - info.offsetOfColumns[i] - 1;
         const start = info.offsetOfColumns[i] + 1;
         const reversed = info.actors.indexOf(this.actor) > info.actors.indexOf(this.actorTo);
-        const sBody = this.dash === '-' ? '·' : '─';
+        const sBody = this.dash === '-' ? '─' : '·';
         const sLeft = reversed ? (this.end === '>' ? '<' : '<<') : sBody;
         const sRight = !reversed ? (this.end === '>' ? '>' : '>>') : sBody;
         drawer.drawLine(line, start, ' ' + this.message.replace(/\\n/g, '\\n '), width, sLeft, sBody, sRight);
